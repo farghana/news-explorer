@@ -50,41 +50,6 @@ In the era of information overload, users often struggle to find relevant and pe
 - Alan AI API for voice-activated commands.
 - News API for fetching real-time news data.
 
-### Sitemap
-
-- Home page
-- List cafés
-- View + Rate a café
-- Register
-- Login
-
-### Mockups
-
-#### Home Page
-![](home.png)
-
-#### Register Page
-![](register.png)
-
-#### Login Page
-![](login.png)
-
-#### Enter Location Page
-![](enter-location.png)
-
-#### View Cafés Page
-![](view-cafes.png)
-
-#### View Café Page
-![](view-cafe.png)
-
-#### View Café Page (Rated state)
-![](view-cafe-rated.png)
-
-
-### Data
-
-![](sql-diagram.png)
 
 ### Endpoints
 
