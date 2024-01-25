@@ -44,6 +44,10 @@ In the era of information overload, users often struggle to find relevant and pe
     - knex
     - express
     - bcrypt for password hashing
+ 
+### Mockups
+
+![Mockups](https://github.com/farghana/news-explorer/assets/4697999/61f8e8d1-536a-4c76-8fa5-f40293a241c0)
 
 ### APIs
 
