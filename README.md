@@ -1,156 +1,75 @@
-# Project Title
-News Explorer: A Smart News Website with Alan AI Integration
+# News Explorer
+
+A full-stack news application that combines React, Node.js, MySQL, and Alan AI to create a voice-enabled news browsing experience.
 
 ## Overview
 
-Experience the future of news exploration with an intelligent news website that leverages Alan AI for a seamless and interactive user experience.
+News Explorer was built to make discovering and saving news more interactive. Users can browse current articles, search by topic, use voice commands through Alan AI, create an account, sign in, and manage saved bookmarks.
 
-### Problem
+This project was originally developed as my BrainStation capstone and received a grade of 94%.
 
-In the era of information overload, users often struggle to find relevant and personalized news content tailored to their interests. This project aims to address this issue by creating a dynamic news website powered by Alan AI, providing users with an intuitive and voice-activated interface for news exploration.
+## Core features
 
-### User Profile
+- Browse curated and current news content
+- Voice-enabled news exploration using Alan AI
+- Search by topic and category
+- User registration and login
+- JWT-based authentication
+- Save and manage bookmarks
+- Filter saved articles
+- Responsive React interface
+- REST API backed by MySQL
 
-- News Enthusiasts:
-    - Users who want to stay updated on the latest news.
-    - Those looking for a personalized news experience based on their preferences.
-    - Users who prefer a hands-free and interactive approach to news consumption.
+## Tech stack
 
-### Features
+### Frontend
 
-- Home: Curated news articles.
-- Explore: Voice-activated search for news topics and categories.
-- Bookmarks: Save and organize favorite articles.
+- React 18
+- React Router
+- JavaScript
+- Axios
+- Alan AI Web SDK
+- Tailwind CSS
 
-- As a user, I want to be able to create an account to manage my bookmarks
-- As a user, I want to be able to login to my account to manage my bookmarks
+### Backend
 
+- Node.js
+- Express
+- MySQL
+- Knex
+- JWT authentication
+- bcrypt password hashing
 
-- As a logged in user, I want to be able to see my bookmarks
-- As a logged in user, I want to be able to filter my bookmarks
+### External APIs
 
-## Implementation
+- Alan AI for voice commands and hands-free interaction
+- News API for live news content
 
-### Tech Stack
+## Architecture
 
-- Frontend: React, JavaScript
-- Backend: Node.js, Express, mysql
-- Client libraries: 
-    - react
-    - react-router
-    - axios
-    - Alan AI SDK
-- Server libraries:
-    - knex
-    - express
-    - bcrypt for password hashing
- 
-### Mockups
+The application is split into a React client and an Express API. The client handles browsing, voice interaction, authentication state, and bookmark workflows. The API handles users, authentication, persisted bookmark data, and database access.
 
-![Mockups](https://github.com/farghana/news-explorer/assets/4697999/61f8e8d1-536a-4c76-8fa5-f40293a241c0)
+### Example authentication endpoints
 
-### APIs
-
-- Alan AI API for voice-activated commands.
-- News API for fetching real-time news data.
-
-
-### Endpoints
-
-Detailed API endpoints for user authentication, saving bookmarks, fetching personalized news, etc.
-
-
-**POST /users/register**
-
-- Add a user account
-
-Parameters:
-
-- email: User's email
-- password: User's provided password
-
-Response:
-```
-{
-    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
-}
+```text
+POST /users/register
+POST /users/login
 ```
 
-**POST /users/login**
+Protected requests use JWT authentication.
 
-- Login a user
+## What I focused on
 
-Parameters:
-- email: User's email
-- password: User's provided password
+This project gave me hands-on experience designing a full-stack application from end to end: frontend routes and state, REST API design, relational data, authentication, third-party API integration, and an AI-powered interaction layer.
 
-Response:
-```
-{
-    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
-}
-```
+The voice interface was especially interesting because it required translating spoken commands into useful navigation and search behavior rather than simply adding AI as a visual feature.
 
-### Auth
+## Local development
 
-- JWT auth
-    - Before adding auth, all API requests will be using a fake user with id 1
-    - Added after core features have first been implemented
-    - Store JWT in localStorage, remove when a user logs out
-    - Add states for logged in showing different UI in places listed in mockups
+The application requires both the client and backend API, along with environment variables for services such as the news provider and Alan AI.
 
-## Roadmap
+Do not commit API keys or credentials to source control.
 
-- Create client
-    - react project with routes and boilerplate pages
+## Portfolio context
 
-- Create server
-    - express project with routing, with placeholder 200 responses
-
-- Integrate Alan AI SDK
-    - Implement Alan AI for voice-activated commands
-
-- Database Setup
-    - set up a database (e.g., Mysql) for storing user preferences and bookmarks
-
-- Create migrations
-
-
-- News API Integration
-    - Integrate a news API for fetching real-time news data
-
-- Feature: Home page
-
-- Feature: Explore 
-    - Implement voice-activated search for news topics and categories
-
-- Feature: Bookmarks
-    - Allow users to save and organize their favorite articles
-
-- Feature: User Profile 
-    - Create a user profile page with relevant information
-
-- Feature: Create account
-    - Implement register page + form
-    - Create POST /users/register endpoint
-
-- Feature: Login
-    - Implement login page + form
-    - Create POST /users/login endpoint
-
-- Feature: Implement JWT tokens
-    - Server: Update expected requests / responses on protected endpoints
-    - Client: Store JWT in local storage, include JWT on axios calls
-
-- Bug fixes
-
-- DEMO DAY
-
-## Nice-to-haves
-
-- Forgot password functionality
-- Ability to add interests for personalized results
-- Dark Mode : Implement a dark mode for improved readability
-- Accessibility: Use Alan AI to read out the news article headlines
-
-
+Most of my recent professional work has been on private production SaaS codebases. News Explorer is one of my public projects demonstrating full-stack JavaScript development, API integration, authentication, database-backed workflows, and practical AI integration.
